@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - StickerShop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f46734",
+                        "background-light": "#f8f6f5",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181311] min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f46734]/10 bg-white px-6 md:px-20 py-4">
+<div class="flex items-center gap-4 text-[#181311]">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h2 class="text-[#181311] text-xl font-bold leading-tight tracking-[-0.015em]">StickerShop</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-[#181311] text-sm font-semibold hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-[#181311] text-sm font-semibold hover:text-primary transition-colors" href="#">Categories</a>
+<a class="text-[#181311] text-sm font-semibold hover:text-primary transition-colors" href="#">Custom</a>
+</nav>
+<div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-6xl mx-auto w-full px-4 py-8 md:py-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-sm font-medium text-[#8a6b60]">
+<a class="hover:text-primary" href="#">Shop</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Cart</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-[#181311]">Checkout</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Summary & Form -->
+<div class="lg:col-span-7 space-y-10">
+<section>
+<h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2">Review Your Order</h1>
+<p class="text-[#8a6b60]">Confirm your selection before we send it to WhatsApp.</p>
+</section>
+<!-- Order Summary -->
+<div class="bg-white rounded-xl border border-[#f46734]/10 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-[#f46734]/10">
+<h2 class="text-lg font-bold">Your Selection (3)</h2>
+</div>
+<div class="divide-y divide-[#f46734]/10">
+<!-- Item 1 -->
+<div class="p-6 flex items-center gap-4">
+<div class="w-20 h-20 rounded-lg bg-gray-100 bg-center bg-cover shrink-0" data-alt="Cute holographic space cat sticker" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3BRC2qcD7Srumg8R8PkPHPECPGIeeoZvNZ3i2Mj4D6ZmLwn_8u6mSyCT_ZtMkIJCHLsk2jPnlMihcYU5XAkzyVrL27lia4ncW15t-ZhdWlopw09kJ1PtW6PwKPJZM3LXs3HfzyhM0Jv6jqHP61d6irWhh3_oSP8BAdfZ1E6i9aKOGqAaDLZPSzkqa4KF140BTSaQnp6PXMe8_v6Au3u3_GLc19sVAuWB3ehCu316xwpoetopgLvTZ6oKzP7Bd6aYavCIhKTQ_lVOc')"></div>
+<div class="flex-1">
+<h3 class="font-bold text-lg">Holographic Space Cat</h3>
+<p class="text-sm text-[#8a6b60]">Large (3x3 inch)</p>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center border border-[#f46734]/20 rounded-lg overflow-hidden h-8">
+<button class="px-2 hover:bg-primary/5"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">2</span>
+<button class="px-2 hover:bg-primary/5 text-primary"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+<p class="font-bold text-lg text-primary">$10.00</p>
+</div>
+<!-- Item 2 -->
+<div class="p-6 flex items-center gap-4">
+<div class="w-20 h-20 rounded-lg bg-gray-100 bg-center bg-cover shrink-0" data-alt="Retro vaporwave style palm tree sticker" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbPQaaHf9RuqBb5BQyjrQ9X5CzxPmigHES0MH6QVt9G4c5MOgv0AMwk5dRQMGJ2-dawWjr-z6NsFtYcBKZUfSn4byF5ssVje8NBqBEj3NI2tp_75Dp8JorM1LEC2VWSElsgbem2Ldm8wXEvpF43rK6SYvl7UR-S9ivSCDvVTCCAbCpeKXN-iV7pBPeVer3moXFNIUtdnscgLCzSSDk1g0YbmR2pcutTFfyRgXXDT3dYsw5chQaJTT946NfSj6lYWnZS0YQrYkryf5S')"></div>
+<div class="flex-1">
+<h3 class="font-bold text-lg">Vaporwave Palm</h3>
+<p class="text-sm text-[#8a6b60]">Matte finish</p>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center border border-[#f46734]/20 rounded-lg overflow-hidden h-8">
+<button class="px-2 hover:bg-primary/5"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">1</span>
+<button class="px-2 hover:bg-primary/5 text-primary"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+<p class="font-bold text-lg text-primary">$4.50</p>
+</div>
+</div>
+</div>
+<!-- Details Form -->
+<div class="space-y-6">
+<h2 class="text-2xl font-bold">Your Details</h2>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-bold text-sm text-[#181311]" for="name">Your Name</label>
+<input class="rounded-lg border-[#f46734]/20 focus:border-primary focus:ring-primary h-12 px-4 bg-white" id="name" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-bold text-sm text-[#181311]" for="notes">Additional Instructions (Optional)</label>
+<textarea class="rounded-lg border-[#f46734]/20 focus:border-primary focus:ring-primary p-4 bg-white" id="notes" placeholder="Any specific requirements for your order?" rows="3"></textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Preview & Action -->
+<div class="lg:col-span-5 space-y-8">
+<!-- WhatsApp Preview Box -->
+<div class="bg-white rounded-xl border border-[#f46734]/10 shadow-lg p-6 flex flex-col gap-4 relative">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<span class="font-bold text-sm uppercase tracking-wider text-[#8a6b60]">WhatsApp Preview</span>
+</div>
+<div class="bg-[#e5ddd5] rounded-lg p-4 relative overflow-hidden">
+<!-- Mock WhatsApp Message -->
+<div class="bg-[#dcf8c6] rounded-lg p-3 shadow-sm max-w-[90%] self-start text-sm">
+<p class="font-medium text-gray-800">Hola! 👋 Quiero pedir estos stickers:</p>
+<div class="my-2 border-l-2 border-primary/30 pl-2 text-gray-600">
+<p>• 2x Holographic Space Cat ($10.00)</p>
+<p>• 1x Vaporwave Palm ($4.50)</p>
+</div>
+<p class="font-bold mt-2">Total: $14.50</p>
+<p class="mt-1 italic text-gray-500 text-xs">De: Alex Johnson</p>
+<p class="text-[10px] text-right text-gray-400 mt-1">10:45 AM ✓✓</p>
+</div>
+<!-- WhatsApp Background Pattern Decoration (simplified) -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 20px 20px;"></div>
+</div>
+<p class="text-xs text-[#8a6b60] italic">This is how your order will be formatted when you click the button below.</p>
+</div>
+<!-- Final Action Sidebar -->
+<div class="bg-white rounded-xl border border-[#f46734]/10 p-6 shadow-sm sticky top-8">
+<div class="space-y-4 mb-6">
+<div class="flex justify-between text-[#8a6b60]">
+<span>Subtotal</span>
+<span>$14.50</span>
+</div>
+<div class="flex justify-between text-[#8a6b60]">
+<span>Processing</span>
+<span class="text-green-600">Free</span>
+</div>
+<div class="h-px bg-[#f46734]/10 w-full"></div>
+<div class="flex justify-between text-xl font-black">
+<span>Total</span>
+<span class="text-primary">$14.50</span>
+</div>
+</div>
+<button class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 transition-all transform hover:scale-[1.02] shadow-md">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+                            Confirm and Send via WhatsApp
+                        </button>
+<p class="mt-4 text-center text-xs text-[#8a6b60]">We'll open WhatsApp so you can chat directly with us about your order.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-[#f46734]/10 py-12 px-6">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+</div>
+<span class="font-bold text-lg">StickerShop</span>
+</div>
+<p class="text-sm text-[#8a6b60]">High-quality custom stickers delivered to your door. Simple ordering via WhatsApp for the best personal service.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Quick Links</h4>
+<ul class="text-sm text-[#8a6b60] space-y-2">
+<li><a class="hover:text-primary" href="#">Track Order</a></li>
+<li><a class="hover:text-primary" href="#">Sticker Care</a></li>
+<li><a class="hover:text-primary" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Contact</h4>
+<ul class="text-sm text-[#8a6b60] space-y-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">mail</span> hello@stickershop.com</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">phone</span> +1 (555) 123-4567</li>
+</ul>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
